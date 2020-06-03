@@ -252,10 +252,10 @@ class SmartBanner extends React.Component {
   capitalizeFirst(str) {
     return str.charAt(0).toUpperCase() + str.substr(1, str.length)
   }
+
   render() {
     const { type, appId } = this.state
 
-    // console.log('heyyyy')
     if (!isClient) {
       return <div />
     }
@@ -275,7 +275,6 @@ class SmartBanner extends React.Component {
     }
 
     if (!appId) {
-      // console.log('heyyyyoooo')
       return <div />
     }
 

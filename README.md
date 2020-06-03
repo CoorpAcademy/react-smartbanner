@@ -75,7 +75,7 @@ And React-SmartBanner component usage:
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import SmartBanner from 'react-smartbanner'
+import SmartBanner from '@coorpacademy/react-smartbanner'
 
 ReactDOM.render(
   <SmartBanner title={'Facebook'} />,
