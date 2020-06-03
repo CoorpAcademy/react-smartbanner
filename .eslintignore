@@ -1,6 +1,5 @@
-dist/*
-example/*
-test/*
-node_modules/*
-package.json
-webpack.*.js
+build/
+dist/
+node_modules/
+.snapshots/
+*.min.js

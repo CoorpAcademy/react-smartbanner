@@ -73,14 +73,14 @@ Remember to add following meta tags in your HTML page: (Use Facebook app as exam
 And React-SmartBanner component usage:
 
 ```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
-import SmartBanner from 'react-smartbanner';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import SmartBanner from 'react-smartbanner'
 
 ReactDOM.render(
   <SmartBanner title={'Facebook'} />,
   document.getElementById('content')
-);
+)
 ```
 
 ### Properties
