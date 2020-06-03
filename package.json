@@ -1,6 +1,6 @@
 {
-  "name": "@coorpacademy/react-smartbanner",
-  "version": "5.1.5",
+  "name": "react-smart-banner-app",
+  "version": "5.1.8",
   "description": "Smart app banner react version.",
   "repository": {
     "type": "git",
@@ -9,86 +9,51 @@
   "bugs": {
     "url": "https://github.com/Coorpacademy/react-smartbanner/issues"
   },
-  "main": "dist/SmartBanner.js",
-  "peerDependencies": {
-    "react": "16.x",
-    "react-dom": "16.x"
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
+  "scripts": {
+    "build": "microbundle-crl --no-compress --format modern,cjs,es",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs,es",
+    "prepare": "run-s build",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "test:lint": "eslint .",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom"
   },
-  "dependencies": {
-    "cookie-cutter": "^0.2.0",
-    "cookies-js": "^1.2.1",
-    "prop-types": "^15.7.2",
-    "react-smartbanner": "^5.1.4",
-    "ua-parser-js": "^0.7.21"
+  "peerDependencies": {
+    "ua-parser-js": ">=0.7"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.1",
-    "@babel/preset-react": "^7.10.1",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.0.1",
-    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "eslint": "^7.1.0",
-    "eslint-config-airbnb": "~18.1.0",
-    "eslint-config-airbnb-base": "~14.1.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-security": "^1.3.0",
-    "jest": "^26.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
     "jest-css-modules-transform": "^4.0.0",
-    "jsdom": "^16.2.2",
-    "parcel-bundler": "^1.12.4",
-    "pre-commit": "^1.2.2",
-    "prettier": "^2.0.5",
-    "react": "16.x",
-    "react-dom": "16.x"
+    "microbundle-crl": "^0.13.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
+    "ua-parser-js": "^0.7.21"
   },
-  "scripts": {
-    "build": "babel src/lib --out-dir dist -s --copy-files",
-    "start": "parcel src/index.html",
-    "lint:fix": "npm run lint -- --fix",
-    "lint": "eslint src --fix",
-    "test": "jest",
-    "coverage": "yarn run test -- --coverage",
-    "coveralls": "NODE_ENV=development cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "prettier:all": "prettier --write 'src/example.js' 'src/lib/**/*.js' 'config/**/*.js'"
-  },
-  "prettier": {
-    "printWidth": 80,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.js",
-      "!**/__mocks__/**",
-      "!**/__tests__/**",
-      "!src/example.js"
-    ],
-    "testURL": "http://localhost",
-    "verbose": true,
-    "transform": {
-      "^.+\\.js$": "babel-jest",
-      ".+\\.(css|styl|less|sass|scss)$": "jest-css-modules-transform"
-    },
-    "globals": {
-      "NODE_ENV": "test"
-    },
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ],
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "setupTestFrameworkScriptFile": "./setupTests.js",
-    "testEnvironment": "jsdom"
-  },
+  "files": [
+    "dist",
+    "postcss.config.js",
+    "README.md"
+  ],
   "keywords": [
     "react",
     "component",
@@ -96,13 +61,17 @@
     "ios",
     "iphone",
     "android",
-    "windowsphone",
     "smart",
     "banner"
   ],
   "author": "patw <patw.hi@gmail.com> (http://patw.me/)",
   "engines": {
-    "node": ">=10.20.1"
+    "node": ">=10"
   },
-  "license": "MIT"
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "cookie-cutter": "^0.2.0",
+    "cookie-js": "^0.0.1",
+    "react": "^16.13.1"
+  }
 }
