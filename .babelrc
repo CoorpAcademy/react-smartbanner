@@ -1,0 +1,71 @@
+{
+  "presets": ["@babel/preset-react"],
+  "plugins": ["@babel/plugin-proposal-class-properties"],
+  "env": {
+    "commonjs": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": true
+            },
+            "loose": true
+          }
+        ]
+      ],
+      "plugins": [
+        [
+          "transform-react-remove-prop-types",
+          {
+            "mode": "wrap"
+          }
+        ]
+      ]
+    },
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": true
+            },
+            "loose": true
+          }
+        ]
+      ],
+      "plugins": [
+        [
+          "css-modules-transform",
+          {
+            "generateScopedName": "[folder]__[local]"
+          }
+        ],
+        "istanbul"
+      ]
+    },
+    "es": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": true
+            },
+            "modules": false,
+            "loose": true
+          }
+        ]
+      ],
+      "plugins": [
+        [
+          "transform-react-remove-prop-types",
+          {
+            "mode": "wrap"
+          }
+        ]
+      ]
+    }
+  }
+}
