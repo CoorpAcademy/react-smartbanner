@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import { SmartBanner } from '.'
+import { SmartBanner } from '../lib'
 
 /* eslint-disable import/first, max-len, no-restricted-properties */
 jest.mock('cookie-cutter', () => {
