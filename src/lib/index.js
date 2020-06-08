@@ -230,15 +230,12 @@ class SmartBanner extends React.Component {
     let icon
 
     if (isClient) {
-      for (let i = 0, max = this.state.settings.iconRels.length; i < max; i++) {
-        const rel = window.document.querySelector(
-          `link[rel="${this.state.settings.iconRels[i]}"]`
-        )
+      const rel = window.document.querySelector(
+        `link[rel="${this.props.iconRel}"]`
+      )
 
-        if (rel) {
-          icon = rel.getAttribute('href')
-          break
-        }
+      if (rel) {
+        icon = rel.getAttribute('href')
       }
     }
 
@@ -342,6 +339,7 @@ SmartBanner.propTypes = {
   position: PropTypes.string,
   url: PropTypes.objectOf(PropTypes.string),
   ignoreIosVersion: PropTypes.bool,
+  iconRel: PropTypes.string,
   appMeta: PropTypes.shape({
     android: PropTypes.string,
     ios: PropTypes.string,
