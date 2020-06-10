@@ -25,7 +25,7 @@
 }
 
 .smartbannerTop {
-  position: absolute;
+  position: fixed;
   top: 0;
 }
 
@@ -131,13 +131,15 @@
   color: rgb(170, 170, 170);
 }
 
-.smartbannerIos {
+.smartbannerIos,
+.smartbannerAndroid {
   background: rgb(242, 242, 242);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   line-height: 80px;
 }
 
-.smartbannerIos .smartbannerClose {
+.smartbannerIos,
+.smartbannerAndroid .smartbannerClose {
   border: 0;
   width: 18px;
   height: 18px;
@@ -148,27 +150,33 @@
   -webkit-font-smoothing: none;
 }
 
-.smartbannerIos .smartbannerClose:active,
-.smartbannerIos .smartbannerClose:hover {
+.smartbannerIos,
+.smartbannerAndroid .smartbannerClose:active,
+.smartbannerIos,
+.smartbannerAndroid .smartbannerClose:hover {
   color: rgb(136, 136, 136);
 }
 
-.smartbannerIos .smartbannerIcon {
+.smartbannerIos,
+.smartbannerAndroid .smartbannerIcon {
   background-size: cover;
 }
 
-.smartbannerIos .smartbannerInfo {
+.smartbannerIos,
+.smartbannerAndroid .smartbannerInfo {
   color: rgb(106, 106, 106);
   text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.8);
   font-weight: 300;
 }
 
-.smartbannerIos .smartbannerTitle {
+.smartbannerIos,
+.smartbannerAndroid .smartbannerTitle {
   color: rgb(77, 77, 77);
   font-weight: 500;
 }
 
-.smartbannerIos .smartbannerButton {
+.smartbannerIos,
+.smartbannerAndroid .smartbannerButton {
   padding: 0 10px;
   font-size: 15px;
   min-width: 10%;
@@ -176,81 +184,9 @@
   color: rgb(12, 113, 253);
 }
 
-.smartbannerIos .smartbannerButton:active,
-.smartbannerIos .smartbannerButton:hover {
-  background: rgb(242, 242, 242);
-}
-
-.smartbannerAndroid {
-  background: rgb(61, 61, 61)
-    url('data:image/gif;base64, R0lGODlhCAAIAIABAFVVVf ///yH5BAEHAAEALAAAAAAIAAgAAAINRG4XudroGJBRsYcxKAA7');
-  box-shadow: inset 0 4px 0 rgb(136, 177, 49);
-  line-height: 82px;
-}
-
-.smartbannerAndroid .smartbannerClose {
-  border: 0;
-  max-width: 17px;
-  width: 100%;
-  height: 17px;
-  line-height: 17px;
-  margin-right: 7px;
-  color: rgb(177, 177, 179);
-  background: rgb(28, 30, 33);
-  text-shadow: 0 1px 1px black;
-  text-decoration: none;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8),
-    0 1px 1px hsla(0, 0%, 100%, 0.3);
-  cursor: pointer;
-}
-
-.smartbannerAndroid .smartbannerClose:active,
-.smartbannerAndroid .smartbannerClose:hover {
-  color: rgb(238, 238, 238);
-}
-
-.smartbannerAndroid .smartbannerIcon {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.smartbannerAndroid .smartbannerInfo {
-  color: rgb(204, 204, 204);
-  text-shadow: 0 1px 2px black;
-}
-
-.smartbannerAndroid .smartbannerTitle {
-  color: white;
-  font-weight: 700;
-}
-
-.smartbannerAndroid .smartbannerButton {
-  min-width: 12%;
-  color: rgb(209, 209, 209);
-  font-weight: 700;
-  padding: 0;
-  background: none;
-  border-radius: 0;
-  box-shadow: 0 0 0 1px rgb(51, 51, 51), 0 0 0 2px rgb(221, 220, 220);
-}
-
+.smartbannerIos,
 .smartbannerAndroid .smartbannerButton:active,
+.smartbannerIos,
 .smartbannerAndroid .smartbannerButton:hover {
-  background: none;
-}
-
-.smartbannerAndroid .smartbannerButtonText {
-  text-align: center;
-  display: block;
-  padding: 0 10px;
-  background: rgb(66, 182, 201);
-  background: linear-gradient(180deg, rgb(66, 182, 201), rgb(57, 169, 187));
-  text-transform: none;
-  text-shadow: none;
-  box-shadow: none;
-}
-
-.smartbannerAndroid .smartbannerButtonText:active,
-.smartbannerAndroid .smartbannerButtonText:hover {
-  background: rgb(42, 199, 225);
+  background: rgb(242, 242, 242);
 }
