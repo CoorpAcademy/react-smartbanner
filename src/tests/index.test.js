@@ -31,7 +31,8 @@ describe('SmartBanner', function () {
       force: '',
       title: '',
       author: '',
-      url: {}
+      url: {},
+      visible: true
     }
 
     this.makeSubject = (_props = {}) => {
