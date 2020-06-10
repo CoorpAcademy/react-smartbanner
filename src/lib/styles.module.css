@@ -131,15 +131,13 @@
   color: rgb(170, 170, 170);
 }
 
-.smartbannerIos,
-.smartbannerAndroid {
+.smartbanner {
   background: rgb(242, 242, 242);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   line-height: 80px;
 }
 
-.smartbannerIos,
-.smartbannerAndroid .smartbannerClose {
+.smartbanner .smartbannerClose {
   border: 0;
   width: 18px;
   height: 18px;
@@ -150,33 +148,27 @@
   -webkit-font-smoothing: none;
 }
 
-.smartbannerIos,
-.smartbannerAndroid .smartbannerClose:active,
-.smartbannerIos,
-.smartbannerAndroid .smartbannerClose:hover {
+.smartbanner .smartbannerClose:active,
+.smartbanner .smartbannerClose:hover {
   color: rgb(136, 136, 136);
 }
 
-.smartbannerIos,
-.smartbannerAndroid .smartbannerIcon {
+.smartbanner .smartbannerIcon {
   background-size: cover;
 }
 
-.smartbannerIos,
-.smartbannerAndroid .smartbannerInfo {
+.smartbanner .smartbannerInfo {
   color: rgb(106, 106, 106);
   text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.8);
   font-weight: 300;
 }
 
-.smartbannerIos,
-.smartbannerAndroid .smartbannerTitle {
+.smartbanner .smartbannerTitle {
   color: rgb(77, 77, 77);
   font-weight: 500;
 }
 
-.smartbannerIos,
-.smartbannerAndroid .smartbannerButton {
+.smartbanner .smartbannerButton {
   padding: 0 10px;
   font-size: 15px;
   min-width: 10%;
@@ -184,9 +176,7 @@
   color: rgb(12, 113, 253);
 }
 
-.smartbannerIos,
-.smartbannerAndroid .smartbannerButton:active,
-.smartbannerIos,
-.smartbannerAndroid .smartbannerButton:hover {
+.smartbanner .smartbannerButton:active,
+.smartbanner .smartbannerButton:hover {
   background: rgb(242, 242, 242);
 }

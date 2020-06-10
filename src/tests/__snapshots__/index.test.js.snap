@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SmartBanner type snapshots should be matched the snapshot (android) 1`] = `
-"<div class=\\"smartbanner smartbannerAndroid smartbannerTop\\"><div class=\\"smartbannerContainer\\"><button type=\\"button\\" class=\\"smartbannerClose\\" aria-label=\\"close\\">×</button><span class=\\"smartbannerIcon\\" style=\\"background-image: url(undefined);\\"></span><div class=\\"smartbannerInfo\\"><div class=\\"smartbannerTitle\\"></div><div class=\\"smartbannerAuthor\\"></div><div class=\\"smartbannerDescription\\">
+"<div class=\\"smartbanner smartbannerTop\\"><div class=\\"smartbannerContainer\\"><button type=\\"button\\" class=\\"smartbannerClose\\" aria-label=\\"close\\">×</button><span class=\\"smartbannerIcon\\" style=\\"background-image: url(undefined);\\"></span><div class=\\"smartbannerInfo\\"><div class=\\"smartbannerTitle\\"></div><div class=\\"smartbannerAuthor\\"></div><div class=\\"smartbannerDescription\\">
       Free - In Google Play</div></div><div class=\\"smartbannerWrapper\\"><a href=\\"undefined\\" class=\\"smartbannerButton\\"><span class=\\"smartbannerButtonText\\">View</span></a></div></div></div>"
 `;
 
 exports[`SmartBanner type snapshots should be matched the snapshot (ios) 1`] = `
-"<div class=\\"smartbanner smartbannerIos smartbannerTop\\"><div class=\\"smartbannerContainer\\"><button type=\\"button\\" class=\\"smartbannerClose\\" aria-label=\\"close\\">×</button><span class=\\"smartbannerIcon\\" style=\\"background-image: url(undefined);\\"></span><div class=\\"smartbannerInfo\\"><div class=\\"smartbannerTitle\\"></div><div class=\\"smartbannerAuthor\\"></div><div class=\\"smartbannerDescription\\">
+"<div class=\\"smartbanner smartbannerTop\\"><div class=\\"smartbannerContainer\\"><button type=\\"button\\" class=\\"smartbannerClose\\" aria-label=\\"close\\">×</button><span class=\\"smartbannerIcon\\" style=\\"background-image: url(undefined);\\"></span><div class=\\"smartbannerInfo\\"><div class=\\"smartbannerTitle\\"></div><div class=\\"smartbannerAuthor\\"></div><div class=\\"smartbannerDescription\\">
       Free - On the App Store</div></div><div class=\\"smartbannerWrapper\\"><a href=\\"undefined\\" class=\\"smartbannerButton\\"><span class=\\"smartbannerButtonText\\">View</span></a></div></div></div>"
 `;
 

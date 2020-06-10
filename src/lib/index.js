@@ -278,8 +278,6 @@ class SmartBanner extends React.Component {
     this.show()
 
     const { icon, link, inStore } = this.retrieveInfo()
-    const smarBannerStyleSystemType =
-      styles['smartbanner' + this.capitalizeFirst(type)]
     const smarBannerStylePosition =
       styles['smartbanner' + this.capitalizeFirst(this.props.position)]
     const iconStyle = {
@@ -287,13 +285,7 @@ class SmartBanner extends React.Component {
     }
 
     return (
-      <div
-        className={classnames(
-          styles.smartbanner,
-          smarBannerStyleSystemType,
-          smarBannerStylePosition
-        )}
-      >
+      <div className={classnames(styles.smartbanner, smarBannerStylePosition)}>
         <div className={styles.smartbannerContainer}>
           <button
             type='button'
