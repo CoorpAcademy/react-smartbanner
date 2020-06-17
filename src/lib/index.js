@@ -298,7 +298,11 @@ class SmartBanner extends React.Component {
           <span className={styles.smartbannerIcon} style={iconStyle} />
           <div className={styles.smartbannerInfo}>
             <div className={styles.smartbannerTitle}>{this.props.title}</div>
-            <div className={styles.smartbannerAuthor}>{this.props.author}</div>
+            {(!!this.props.author && (
+              <div className={styles.smartbannerAuthor}>
+                {this.props.author}
+              </div>
+            )) || <div className={styles.space} />}
             <div className={styles.smartbannerDescription}>{inStore}</div>
           </div>
           <div className={styles.smartbannerWrapper}>
