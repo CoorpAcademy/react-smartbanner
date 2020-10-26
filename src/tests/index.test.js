@@ -53,6 +53,25 @@ describe('SmartBanner', function () {
     expect(subject.length).toBeTruthy()
   })
 
+  it('should hide smart banner', () => {
+    const subject = this.makeSubject({
+      force: 'android',
+      position: 'top'
+    })
+    expect(subject.length).toBeTruthy()
+    expect(window.document.querySelector('html').classList).toContain(
+      'smartbannerShow'
+    )
+    expect(subject.html()).toMatchSnapshot()
+    subject.setProps({
+      visible: false
+    })
+    expect(window.document.querySelector('html').classList).not.toContain(
+      'smartbanner-show'
+    )
+    expect(subject.html()).toMatchSnapshot()
+  })
+
   describe('type snapshots', () => {
     it('should be matched the snapshot (no type)', () => {
       const subject = this.makeSubject()
