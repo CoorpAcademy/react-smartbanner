@@ -254,6 +254,7 @@ class SmartBanner extends React.Component {
     const { type, appId } = this.state
 
     if (!isClient || !this.props.visible) {
+      this.hide()
       return <div />
     }
 
